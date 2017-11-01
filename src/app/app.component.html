@@ -1,0 +1,30 @@
+<!-- <h1>
+  {{title}}
+</h1>
+  -->
+<!-- <ul>
+  <li *ngFor="let book of books">
+    <input [(ngModel)]="book.name" placeholder="name">
+  </li>  
+</ul> -->
+
+<h2>Top Selling Books</h2>
+<!-- Book ID: {{book.id}} -->
+<div class="col-md-12">
+  <ul class="top-selling-books">
+    <li *ngFor="let libraryBook of libraryBooks" (click)="onSelect(libraryBook)" 
+    [class.selected]="libraryBook === selectedBook" >
+      <p><img src="{{ libraryBook.image_path }}" width="200"></p>
+      <p>{{ libraryBook.name }}</p>
+    </li>  
+  </ul>
+</div>
+<book-detail [book]="selectedBook"></book-detail>
+<!-- <div class="col-md-12">
+  <div *ngIf="selectedBook">
+    <h2>{{ selectedBook.name }}</h2>
+    <div>
+       <p>{{ selectedBook.description }}</p>
+    </div>
+  </div>
+</div> -->
