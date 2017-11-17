@@ -10,7 +10,7 @@
 
 <h2>Top Selling Books</h2>
 <!-- Book ID: {{book.id}} -->
-<div class="col-md-12">
+<!-- <div class="col-md-12">
   <ul class="top-selling-books">
     <li *ngFor="let libraryBook of libraryBooks" (click)="onSelect(libraryBook)" 
     [class.selected]="libraryBook === selectedBook" >
@@ -18,7 +18,11 @@
       <p>{{ libraryBook.name }}</p>
     </li>  
   </ul>
-</div>
+</div> -->
+
+
+<br/>
+<app-books></app-books>
 <book-detail [book]="selectedBook"></book-detail>
 <!-- <div class="col-md-12">
   <div *ngIf="selectedBook">
